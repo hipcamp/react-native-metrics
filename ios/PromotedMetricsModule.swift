@@ -103,7 +103,7 @@ public extension PromotedMetricsModule {
       collectionInteraction: collectionInteraction(args: args),
       contentId: args.contentId,
       insertionId: args.insertionId,
-      properties: args.properties
+      properties: args.content.properties
     )
   }
 
