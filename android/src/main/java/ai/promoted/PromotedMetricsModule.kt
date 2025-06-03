@@ -200,6 +200,7 @@ class PromotedMetricsModule(
     val content = content()
     val insertionId = content?.insertionId() ?: insertionId()
     val contentId = content?.contentId() ?: contentId()
+    val properties = content?.properties() ?: properties()
     val autoViewId = autoViewId()
     val hasSuperimposedViews = hasSuperimposedViews()
     return ImpressionData.Builder().apply {
@@ -207,6 +208,7 @@ class PromotedMetricsModule(
       this.contentId = contentId
       this.autoViewId = autoViewId
       this.hasSuperimposedViews = hasSuperimposedViews
+      this.customProperties = properties
     }.build(null)
   }
 
@@ -243,6 +245,12 @@ class PromotedMetricsModule(
         ?: this["contentId"] as? String?
         ?: this["_id"] as? String?
     }
+    else -> null
+  }
+
+  private fun Any?.properties(): ReadableMap? = when (this) {
+    is ReadableMap -> getMap("properties")
+    is Map<*, *> -> this["properties"] as? ReadableMap?
     else -> null
   }
 
