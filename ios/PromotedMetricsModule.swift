@@ -102,8 +102,7 @@ public extension PromotedMetricsModule {
       autoViewState: args.autoViewState,
       collectionInteraction: collectionInteraction(args: args),
       contentId: args.contentId,
-      insertionId: args.insertionId,
-      properties: args.content.properties
+      insertionId: args.insertionId
     )
   }
 
