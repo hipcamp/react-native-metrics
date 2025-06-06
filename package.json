@@ -1,5 +1,5 @@
 {
-  "name": "react-native-metrics",
+  "name": "@hipcamp/react-native-metrics",
   "version": "1.3.2",
   "description": "Promoted metrics logging library for React Native.",
   "main": "lib/commonjs/index",
@@ -28,13 +28,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/promotedai/react-native-metrics",
+  "repository": "https://github.com/hipcamp/react-native-metrics",
   "author": "Yuna Wang <yuna@promoted.ai> (https://github.com/rockapot)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/promotedai/react-native-metrics/issues"
+    "url": "https://github.com/hipcamp/react-native-metrics/issues"
   },
-  "homepage": "https://github.com/promotedai/react-native-metrics#readme",
+  "homepage": "https://github.com/hipcamp/react-native-metrics#readme",
   "publishConfig": {
     "cache": "/tmp/npm",
     "registry": "https://registry.npmjs.org/"
