@@ -1,5 +1,5 @@
 {
-  "name": "@promotedai/react-native-metrics",
+  "name": "react-native-metrics",
   "version": "1.3.2",
   "description": "Promoted metrics logging library for React Native.",
   "main": "lib/commonjs/index",
