@@ -11,12 +11,12 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "10.0" }
-  s.source       = { :git => "https://github.com/promotedai/react-native-metrics.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/hipcamp/react-native-metrics.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency "PromotedAIMetricsSDK", "~> 1.3.3"
+  # s.dependency "PromotedAIMetricsSDK", "~> 1.3.3"
 
   # If the app pulls in PromotedAIMetricsSDK/FirebaseAnalytics,
   # then we need to pull this in too. If the app doesn't pull in
