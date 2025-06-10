@@ -7,7 +7,7 @@ target 'BuildProject' do
   config = use_native_modules!
 
   pod 'GTMSessionFetcher/Core', :modular_headers => true
-  # pod 'PromotedAIMetricsSDK', :git => 'https://github.com/hipcamp/ios-metrics-sdk', branch: 'mt/impression-properties'
+  pod 'PromotedAIMetricsSDK', :git => 'https://github.com/hipcamp/ios-metrics-sdk', branch: 'mt/impression-properties'
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -22,5 +22,8 @@ target 'BuildProject' do
 
   post_install do |installer|
     react_native_post_install(installer)
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    end
   end
 end
